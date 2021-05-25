@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div>
+                <h3>Sorting Algorithm</h3>
+            </div>
+            <div id="menu">
+                <ul id="menuItem">
+                    <li class="active">Selection Sort</li>
+                    <li>Bubble Sort</li>
+                    <li>Insertion Sort</li>
+                    <li>Merge Sort</li>
+                    <li>Quick Sort</li>
+                </ul>
+                <hr>
+            </div>
+            <div>
+                <button type="button" id="newArray"><abbr title="Generate new Array">New Array</abbr></button>
+            </div>
+        </nav>
+        <div id="bars">
+
+        </div>
+        <div class="footer">
+            <div>
+                <input type="range" min="15" max="100" step="5" class="slider" id="arraySize"><br>
+                <span>Array Size</span>
+            </div>
+            <div>
+                <button type="button" id="start" ><abbr title="Start Sorting">Start</abbr></button>
+            </div>
+            <div>
+                <input type="range" min="50" max="550" step="100" class="slider" id="speed"><br>
+                <span>Sorting speed</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/bars.js"></script>
+    <script src="js/BubbleSort.js"></script>
+    <script src="js/SelectionSort.js"></script>
+    <script src="js/InsertionSort.js"></script>
+</body>
+</html>
