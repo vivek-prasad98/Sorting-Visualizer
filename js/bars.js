@@ -84,7 +84,7 @@ async function swapEle(el1,el2)
 
 
 const getFunction = () => {
-    const functionsArray = [SelectionSort,BubbleSort,InsertionSort]
+    const functionsArray = [SelectionSort,BubbleSort,InsertionSort,MergeSort]
     let fn;
     lists.forEach(function(list,index){
         if(list.classList.contains('active'))
