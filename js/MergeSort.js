@@ -25,12 +25,14 @@ async function MergeArray(a, l, m, h,x) {
         await waitforme(delay);
         if(left[i] <= right[j]){
             a[k] = left[i];
+            x[k].style.backgroundColor = 'rgb(50, 211, 189)';
             x[k].style.height = `${left[i]}px`;
             i++;
             k++;
         }
         else{
             a[k] = right[j];
+            x[k].style.backgroundColor = 'rgb(50, 211, 189)';
             x[k].style.height = `${right[j]}px`;
             j++;
             k++;
@@ -39,7 +41,7 @@ async function MergeArray(a, l, m, h,x) {
     while(i < n1){
         await waitforme(delay);
         a[k] = left[i];
-        await waitforme(10);
+        x[k].style.backgroundColor = 'rgb(50, 211, 189)';
         x[k].style.height = `${left[i]}px`;
         i++;
         k++;
@@ -47,12 +49,10 @@ async function MergeArray(a, l, m, h,x) {
     while(j < n2){
         await waitforme(delay);
         a[k] = right[j];
+        x[k].style.backgroundColor = 'rgb(50, 211, 189)';
         x[k].style.height = `${right[j]}px`;
         j++;
         k++;
-    }
-    for(let i = l; i <= h; i++){
-        x[i].style.backgroundColor = 'rgb(50, 211, 189)';
     }
 }
 
