@@ -1,5 +1,6 @@
 let bar = [];
 let animationSpeed = 400;
+let delay = 20;
 const barsContainer = document.querySelector('#bars');
 const arrayBtn = document.querySelector('#newArray');
 const start = document.querySelector('#start');
@@ -173,7 +174,6 @@ sizeChange.addEventListener('change',(e)=>{
     arr.createBar(barsContainer);
 });
 speedChange.addEventListener('change',(e)=>{
-    // console.log(ty);
-    console.log(parseInt(speedChange.getAttribute('max')) - speedChange.value) - parseInt(speedChange.getAttribute('min'));
+    delay =(parseInt(speedChange.getAttribute('max')) - speedChange.value) + parseInt(speedChange.getAttribute('min'));
 
 })
