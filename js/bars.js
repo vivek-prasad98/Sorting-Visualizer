@@ -1,6 +1,8 @@
 let bar = [];
 let animationSpeed = 400;
 let delay = 20;
+let max = 500;
+let min = 50;
 const barsContainer = document.querySelector('#bars');
 const arrayBtn = document.querySelector('#newArray');
 const start = document.querySelector('#start');
@@ -109,17 +111,24 @@ start.addEventListener('click',()=>{
 
 arrayBtn.addEventListener('click',()=>{
     let size = sizeChange.value;
-    const arr = new newBars(size,50,500);
+    if(window.innerWidth < 500)
+        size=45;
+    const arr = new newBars(size,min,max);
     arr.createBar(barsContainer);
 });
 
 
-window.addEventListener('load',()=>{
+window.addEventListener('load',(e)=>{
     if(bar.length<1)
     {
         barsContainer.setAttribute('style','align-items:center');
         barsContainer.innerHTML = 'No Data available!<br>Please Click on  New Array Button'
     }
+    handleScreenChange(window.innerWidth);
+    lists.forEach((list)=>{
+        if(list.classList.contains('active'))
+            menuSpan.innerText = list.innerText;
+    })
 });
 
 
@@ -170,7 +179,7 @@ function EnableBtns(){
 }
 
 sizeChange.addEventListener('change',(e)=>{
-    const arr = new newBars(e.target.value,20,500);
+    const arr = new newBars(e.target.value,min,max);
     arr.createBar(barsContainer);
 });
 speedChange.addEventListener('change',(e)=>{

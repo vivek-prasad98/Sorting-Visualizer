@@ -1,0 +1,108 @@
+@media screen and (max-width: 1100px) {
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav:first-child h3{
+        font-size: 18px;
+    }
+    #newArray{
+        font-size: 12px;
+        margin-top: 17px;
+        padding:10px;
+        white-space: nowrap;
+    }
+    #menu{
+        width:100%;
+        color: #f4f4f4;
+        position: relative;
+        transition:all 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    #menu span{
+        color: #f4f4f4;
+        font-size: 14px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(255, 153, 153);
+        display: inline-block;
+        margin-bottom: 10px;
+        padding:10px 50px;
+    }
+    #menuItem{
+        text-align: center;
+        width: 80%;
+        color: #f4f4f4;
+        overflow: hidden;
+        transition:all 0.5s ease-in-out;
+        background-color:rgb(32, 31, 51);
+        position: absolute;
+        padding:10px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        height:0;
+        z-index: 1;
+    }
+    #menuItem li{
+        width: 80%;
+        font-size: 14px;
+        transition:all 0.5s ease-in-out;
+    }
+    hr{
+        display: none;
+    }
+    .bar{
+        width: 4px;
+    }
+    #bars{
+        padding:0px 10px;
+        height:50vh;
+    }
+    .footer{
+        position: absolute;
+        bottom:0;
+        /* background:#444; */
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .nav:first-child h3{
+        font-size: 17px;
+    }
+    .bar{
+        width:2px;
+    }
+    #newArray{
+        font-size: 8px;
+        margin-top: 9px;
+        padding:10px;
+        white-space: nowrap;
+    }
+    #menuItem li{
+        width: 80%;
+        font-size: 12px;
+        margin: 5px;
+        padding:5px
+    }
+    /* input[type="range"]{
+        display: none;
+    }
+    .footer span{
+        display: none;
+    } */
+    .footer div:first-child{
+        display: none;
+    }
+    .footer div:last-child{
+        font-size: 12px;
+    }
+    .footer div:last-child input{
+        width:140px;
+        margin-bottom:10px;
+    }
+    .footer button{
+        font-size: 10px;
+    }
+    #bars{
+        font-size: 11px;
+    }
+
+  }
